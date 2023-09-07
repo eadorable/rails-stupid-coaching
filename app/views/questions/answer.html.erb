@@ -3,15 +3,9 @@
   <h3><%= params[:question] %></h3>
   <p>-You</p>
 
-  <% if params[:question].include?("?") %>
-    <h3>Silly question, get dressed and go to work!.</h3>
-    <p>-Coach</p>
-  <% elsif params[:question] == "I am going to work" %>
-    <h3>Great!</h3>
-    <p>-Coach</p>
-  <% else %>
-    <h3>I don't care, get dressed and go to work!</h3>
-    <p>-Coach</p>
-  <% end %>
+
+  <h3><%= @answer %></h3>
+  <p>-Coach</p>
+
   <%= link_to "Ask again", ask_path %>
 </div>
